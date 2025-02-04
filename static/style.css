@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "Digital 7";
+    src: url(fonts/Digital7Monoitalic-8MDLJ.ttf);
+}
+@font-face {
+    font-family: "LiberationSans-Bold";
+    src: url(fonts/LiberationSans-Bold.ttf)
+}
+@font-face {
+    font-family: "LiberationSans-Regular";
+    src: url(fonts/LiberationSans-Regular.ttf);
+}
+
+body {
+    font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: -5px;
+    text-align: center;
+    font-size: 45px;
+}
+
+#calculator-container {
+    border: 4px solid #333; /* Adjust the border thickness and color */
+    border-radius: 20px 20px 60px 60px; /* Adds rounded corners */
+    width: 90%; /* Set width of the calculator */
+    max-width: 400px; /* Ensure it doesn't get too wide */
+    margin: 20px auto; /* Center the calculator */
+    padding: 30px 40px; /* Add some padding inside the container */
+    background-color: #e4e4e4; /* Set a background color for the calculator */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+#credit {
+    font-style: italic;
+    opacity: 0.7;
+    font-size: 25px;
+}
+
+#title {
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#calculatorInput {
+    position: relative; /* Make the container a positioning context */
+    display: flex; /* Use flexbox for aligning the base number */
+    align-items: center;
+    justify-content: flex-end; /* Align content to the right */
+    font-size: 3.15em;
+    font-family: "Digital 7", sans-serif;
+    text-align: right;
+    padding: 10px 30px;
+    height: 75px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding/border are included in width */
+    border-radius: 10px 10px 15px 15px;
+    letter-spacing: 0.08em; /* Adjust spacing between characters */
+    background-color: #d4e9c7;
+    border: 2px solid #ccc;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds an inset shadow */
+    overflow: hidden; /* Prevent overflow of large numbers */
+}
+
+#calculatorInput sup {
+    font-size: 0.5em; /* Smaller font size for the exponent */
+    position: relative; /* Enable fine-tuning of position */
+    top: -.25em; /* Move the superscript higher */
+}
+
+
+
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:  20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-auto-flow: column; /* Column-first placement */
+}
+
+#grid-container p {
+    color: rgb(110, 194, 55);
+    font-size: .75rem;
+    padding: 4px 1px 1px 1px;
+    max-width: 90%;
+    font-family: "LiberationSans-Bold";
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+button{
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 3% 6% 9% 6%;
+    height: 50px;
+    width: 90%;
+    font-size: 1.4rem;
+    border-radius: 10px 10px 20px 20px;
+    border-color: rgb(194, 194, 194);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    align-self: stretch; /* Ensures grid items fill the row space */
+    font-family: "LiberationSans-Bold";
+    text-shadow: 0 1px 1px #797979;
+    transition: all 0.1s ease;
+    user-select: none;            /* Standard */
+    -webkit-user-select: none;    /* For Chrome, Safari */
+    -moz-user-select: none;       /* For Firefox */
+    -ms-user-select: none;        /* For Internet Explorer/Edge */
+}
+
+button:hover {
+    background-color: #eeeeee; /* Light gray background on hover */
+    transform: scale(1.025); /* Slightly enlarge the button */
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+button:active {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); /* Shadow becomes smaller */
+    transform: translateY(2px); /* Button moves slightly down */
+    background-color: #ddd; /* Optional: change background color when pressed */
+}
+
+button.black:hover {
+    background-color: #555; /* Dark gray for black buttons */
+    color: white;
+}
+
+button.gray:hover {
+    background-color: #aaa; /* Slightly lighter */
+    color: white;
+}
+
+.gray {
+    background-color: gray;
+    color: white;
+}
+
+.black {
+    background-color: rgba(39, 36, 36, 0.829);
+    color: white;
+}
+
+.green {
+    background-color: rgb(98, 214, 98);
+    color: white;
+    text-shadow: 0 0px 0px;
+}
+
+button.green:hover{
+    background-color: rgb(137, 241, 137);;
+    color: white;
+}
